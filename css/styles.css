@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    color: black;
+    line-height: 1.6;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    padding: 2rem 0 2rem;
+    text-align: left;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2.5rem 0 2rem;
+    letter-spacing: -0.5px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.game-card {
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.game-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.game-image {
+    width: 100%;
+    height: 300px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #555;
+    overflow: hidden;
+}
+
+.game-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.game-desc {
+    font-size: 0.95rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 2px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #e0e0e0;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid black;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.contact a:hover {
+    opacity: 0.7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 6rem;
+    padding-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* モバイル対応のためのメディアクエリ */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+    
+    header {
+        padding: 1.5rem 0 2rem;
+    }
+    
+    h1 {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+        margin: 3rem 0 1.5rem;
+    }
+    
+    .games-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .coming-soon {
+        padding: 4rem 0;
+        font-size: 1.5rem;
+    }
+    
+    .social-links {
+        gap: 1.5rem;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header {
+        padding: 1rem 0 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+        margin: 2.5rem 0 1.2rem;
+    }
+    
+    .game-image {
+        height: 180px;
+    }
+    
+    .game-info {
+        padding: 1.2rem;
+    }
+    
+    .game-title {
+        font-size: 1.3rem;
+    }
+    
+    .coming-soon {
+        padding: 3rem 0;
+        font-size: 1.2rem;
+    }
+    
+    .contact {
+        font-size: 1rem;
+    }
+}
